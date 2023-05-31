@@ -1,0 +1,88 @@
+/* #root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 1rem auto 4rem;
+  } */
+  
+  .product--image {
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    margin: auto 1rem;
+    text-align: center;
+    font-family: arial;
+    transition: transform 0.2s ease-in-out;
+  }
+  .card:hover {
+  transform: scale(1.05);
+}
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .button:hover {
+    opacity: 0.7;
+  }
+  
+  .container {
+    max-width: 133rem !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+  .pick-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .title{
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    max-width: 50rem;
+    margin-bottom: 5rem;
+  }
+.p{
+    font-size: 1.6rem;
+    font-family:"Rubik",sans-serif;
+    color:' #706f7b';
+    line-height: 1.5;
+    
+}
+.h3{
+    font-size: 2.9rem;
+    font-family: 'Poppins", sans-serif';
+    font-weight: 500;
+}
+.h2{
+    font-size: 5rem;
+    font-family: "Rubik", sans-serif;
+    margin : 0.5rem 0 1rem 0;
+}
+    
+
+
+
+
+  

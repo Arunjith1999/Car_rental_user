@@ -1,0 +1,82 @@
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+.card-wrapper{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.img-showcase{
+    display: flex;
+    width: 80%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 80%;
+}
+.img-display{
+    overflow: hidden;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.car-type {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    font-size:  1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+  }
+  .select {
+    font-size: 1.5rem;
+    color: #ababab;
+    font-family: "Rubik", sans-serif;
+    border: 1px solid #ccd7e6;
+    border-radius: 3px;
+    font-weight: 400;
+    padding: 1.2rem 1.3rem;
+    outline: none;
+  }
+  .paymentbutton{
+    background-color: crimson;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 25rem;
+  }
+.paymentbutton:hover{
+    color: black;
+    background-color: tomato;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.rentlimit{
+    color: #ababab;
+    margin-top: 2%;
+}
+.limitspan{
+   font-weight: 400;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.couponbutton{
+    height: 3.3rem;
+    background-color: cornflowerblue;
+    font-size: 1.2rem;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: none;
+}
+.couponbutton:hover{
+    background-color: rgb(48, 48, 182);
+    color: white;
+   
+    
+}

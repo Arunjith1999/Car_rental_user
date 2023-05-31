@@ -1,0 +1,156 @@
+
+  .address {
+    font-style: normal;
+   
+   
+  }
+  
+  button {
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+  }
+  
+  .fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .h1 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-block: 0 1.5em;
+  }
+  
+  .h2 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-block: 0 0.5em;
+  }
+  
+  .legend {
+    font-weight: 600;
+    margin-block-end: 0.5em;
+    padding: 0;
+  }
+  
+  .input {
+    border: 0;
+    color: inherit;
+    font: inherit;
+  }
+  
+  .input{
+    color:aliceblue;
+  }
+  
+  .table {
+    border-collapse: collapse;
+    inline-size: 100%;
+  }
+  
+  .tbody {
+    color: #b4b4b4;
+  }
+  
+  .td {
+    padding-block: 1em;
+    font-size: 15px;
+    color: black;
+  }
+  
+  .tfoot {
+    border-top: 1px solid #b4b4b4;
+    font-weight: 600;
+  }
+  
+  .align {
+    display: grid;
+    place-items: center;
+  }
+  
+  .button {
+    align-items: center;
+    background-color: rgb(81, 180, 81);
+    border-radius: 999em;
+    color: #fff;
+    display: flex;
+    gap: 0.5em;
+    font-size: large;
+    justify-content: center;
+    padding-block: 0.75em;
+    padding-inline: 1em;
+    transition: 0.3s;
+    inline-size: 100%;
+  }
+  
+  .button:focus,
+  .button:hover {
+    background-color: #417b12;
+  }
+  
+  .button-full {
+    inline-size: 100%;
+  }
+  
+  .card {
+    border-radius: 1em;
+    background-color: #e96363;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  .form {
+    display: grid;
+    gap: 2em;
+  }
+  
+  .formradios {
+    display: grid;
+    gap: 1em;
+  }
+  
+  .formradio {
+    align-items: center;
+    background-color: #fefdfe;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.0625);
+    display: flex;
+    padding: 1em;
+  }
+  
+  .formradio label {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: 1em;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+  }
+  
+  .icon {
+    block-size: 1em;
+    display: inline-block;
+    fill: #e96363;
+    inline-size: 1em;
+    vertical-align: middle;
+  }
+  
+  .iphone {
+    background-color: #fbf6f7;
+    background-image: linear-gradient(to bottom, #fbf6f7, #fff);
+    border-radius: 2em;
+    block-size: 812px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.0625);
+    inline-size: 375px;
+    overflow: auto;
+    padding: 2em;
+  }
+  
