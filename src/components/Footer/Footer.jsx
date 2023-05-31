@@ -3,7 +3,7 @@ import styles from './Footer.module.css'
 function Footer() {
     return (
       <>
-        <footer>
+        <footer style={{backgroundColor:'#FFFFE0'}}>
           <div className={styles.container}>
             <div className={styles["footer-content"]}>
               <ul className={styles.one}>

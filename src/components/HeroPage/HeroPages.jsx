@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import './CarModelsAbout.scss'
+import styles from './CarModelsAbout.module.css'
 function HeroPages({ name }) {
   return (
     <>
-      <section className="hero-pages">
-        <div className="hero-pages__overlay"></div>
-        <div className="container">
-          <div className="hero-pages__text">
-            <h3>{name}</h3>
-            <p>
+      <section className={styles['hero-pages']}>
+        <div className={styles.overlay}></div>
+        <div className={styles.container}>
+          <div className={styles.text}>
+            <h3  className={styles['text-h3']}>{name}</h3>
+            <p className={styles['text-p']}>
               <Link to="/">Home</Link> / {name}
             </p>
           </div>

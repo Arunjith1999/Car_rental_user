@@ -125,11 +125,11 @@ const labelStyle = {
                       marginTop:'6rem'
                     }}
                   />
-                  <div className="col" style={{marginTop:'3rem'}}>
+                  {/* <div className="col" style={{marginTop:'3rem'}}>
                   <TextField id="standard-basic" style={textFieldStyle}  label="Coupon Available?" variant="standard" InputLabelProps={{ style: labelStyle }} />
                   <button className={styles.couponbutton}>Apply Coupon</button>
                 
-                  </div>
+                  </div> */}
                    
                 </div>
               </div>

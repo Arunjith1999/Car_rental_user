@@ -1,49 +1,13 @@
 
-// font family
-$titles-font: "Poppins", sans-serif;
-$text-font: "Rubik", sans-serif;
-// background colors
-$bg-gray: #f8f8f8;
-$bg-white: #ffffff;
 
-// text color
-$text-black: #010103;
-$text-orange: #ff4d30;
-$btn-black: #161616;
-$text-gray: #706f7b;
 
-// sizes
-$h1-size: 5.2rem;
-$h2-size: 4.2rem;
-$h3-size: 2.4rem;
-$h4-size: 2.2rem;
-$p-size: 1.6rem;
-$input-size: 1.4rem;
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    background-color: $bg-white;
-    font-family: $titles-font;
-    position: relative;
-  }
-  
   .container {
     max-width: 133rem !important;
     margin: 0 auto !important;
     padding: 0 2.5rem !important;
   }
   
-  // scroll bar ------
+  
   
   /* Firefox */
   * {
@@ -84,33 +48,33 @@ $input-size: 1.4rem;
 
 
 .plan-section {
-    background-color: $bg-white;
+    background-color: #ffffff;
     padding: 5.3rem 0;
   }
   
   .plan-container {
     display: flex;
     flex-direction: column;
-  
-    &__title {
+  }
+  .title {
       margin: 0 auto;
       text-align: center;
-      color: $text-black;
-  
-      h3 {
-        font-size: $h3-size;
-        font-family: $text-font;
+      color:  #010103;
+  }
+    .plancontainer-h3 {
+        font-size:  2.4rem;
+        font-family:"Rubik", sans-serif;
         font-weight: 500;
       }
   
-      h2 {
-        font-size: $h2-size;
-        font-family: $titles-font;
+      .plancontainer-h2 {
+        font-size: 4.2rem;
+        font-family: "Poppins", sans-serif;
         margin: 1.3rem 0 3rem 0;
       }
-    }
+    
   
-    &__boxes {
+  .boxes {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto;
@@ -126,31 +90,30 @@ $input-size: 1.4rem;
         grid-template-columns: 1fr;
         margin-top: 1rem;
       }
-  
-      &__box {
+    }
+    .box {
         text-align: center;
         padding: 1rem 6rem;
   
         @media (max-width: 500px) {
           padding: 1rem 1rem;
         }
-  
-        img {
+      }
+      .box-img {
           width: 17rem;
           height: auto;
         }
   
-        h3 {
-          font-size: $h3-size;
+      .box-h3 {
+          font-size:  2.4rem;
+          /* evdem vare.......... */
           margin-bottom: 1rem;
         }
   
-        p {
-          font-size: $p-size;
-          font-family: $text-font;
-          color: $text-gray;
+        .box-p {
+          font-size:1.6rem;
+          font-family: "Rubik", sans-serif;
+          color: black;
           line-height: 1.43;
         }
-      }
-    }
-  }
+    

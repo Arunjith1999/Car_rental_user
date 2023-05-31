@@ -1,39 +1,5 @@
-$titles-font: "Poppins", sans-serif;
-$text-font: "Rubik", sans-serif;
-// background colors
-$bg-gray: #f8f8f8;
-$bg-white: #ffffff;
 
-// text color
-$text-black: #010103;
-$text-orange: #ff4d30;
-$btn-black: #161616;
-$text-gray: #706f7b;
 
-// sizes
-$h1-size: 5.2rem;
-$h2-size: 4.2rem;
-$h3-size: 2.4rem;
-$h4-size: 2.2rem;
-$p-size: 1.6rem;
-$input-size: 1.4rem;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: $bg-white;
-  font-family: $titles-font;
-  position: relative;
-}
 
 .container {
   max-width: 133rem !important;
@@ -41,7 +7,7 @@ body {
   padding: 0 2.5rem !important;
 }
 
-// scroll bar ------
+
 
 /* Firefox */
 * {
@@ -88,8 +54,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-  
-    &__overlay {
+}
+  .overlay {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -98,7 +64,7 @@ body {
       background-color: rgba(255, 255, 255, 0.92);
     }
   
-    &__text {
+  .text {
       display: flex;
       flex-direction: column;
       z-index: 3;
@@ -106,31 +72,29 @@ body {
       width: 100%;
       height: 41rem;
       justify-content: center;
-      color: $text-black;
-  
-      h3 {
+      color: #010103;
+  }
+      .text-h3 {
         font-size: 3.6rem;
         margin-bottom: 0.5rem;
       }
   
-      p {
-        font-size: $p-size;
+      .text-p {
+        font-size:  1.6rem;
         font-weight: 600;
-  
-        a {
-          color: $text-black;
+      }
+        .text-a {
+          color:#010103;
           text-decoration: none;
           transition: all 0.2s;
-  
-          &:hover {
-            color: $text-orange;
-          }
         }
-      }
-    }
-  }
+          .text-a &:hover {
+            color: #ff4d30;
+          }
+      
+   
   
-  // about scss
+ 
   .about-main {
     margin: 10rem auto;
     display: flex;
@@ -148,8 +112,8 @@ body {
     @media (max-width: 520px) {
       max-width: 100%;
     }
-  
-    &__img {
+  }
+    .main-img {
       width: 43rem;
       height: 43rem;
   
@@ -163,33 +127,33 @@ body {
       }
     }
   
-    &__text {
-      color: $text-black;
+    .main-text {
+      color:#010103;
       display: flex;
       flex-direction: column;
-  
-      h3 {
-        font-size: $h4-size;
-        font-family: $text-font;
+    }
+      .main-h3 {
+        font-size:  2.2rem;
+        font-family: "Rubik", sans-serif;
         font-weight: 500;
         margin-bottom: 1rem;
       }
   
-      h2 {
-        font-size: $h2-size;
+      .main-h2 {
+        font-size: 4.2rem;
         line-height: 1.2;
       }
   
-      p {
-        font-size: $p-size;
-        color: $text-gray;
-        font-family: $text-font;
+      .main-p {
+        font-size: 1.6rem;
+        color: #706f7b;
+        font-family: "Rubik", sans-serif;
         line-height: 1.5;
         margin-top: 2rem;
         margin-bottom: 4rem;
       }
   
-      &__icons {
+      .main-icons {
         display: grid;
   
         grid-template-columns: 1fr 1fr 1fr;
@@ -199,29 +163,30 @@ body {
           grid-template-columns: 1fr;
           margin: 0 auto;
           gap: 0;
-  
-          p {
+        }
+      }
+          .main-p {
             margin-top: 0;
           }
-        }
   
-        &__box {
+  
+      .main-box {
           display: flex;
           flex-direction: column;
   
           @media (max-width: 520px) {
             align-items: center;
           }
-  
+        }
           .last-fk {
             width: 5rem;
           }
   
-          img {
+          .img {
             width: 7rem;
           }
   
-          span {
+          .span {
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -230,15 +195,11 @@ body {
               text-align: center;
               flex-direction: column;
             }
-  
-            h4 {
+          }
+            .h4 {
               font-size: 4.6rem;
             }
-          }
-        }
-      }
-    }
-  }
+      
   .book-banner {
     display: flex;
     width: 100%;
@@ -252,7 +213,7 @@ body {
       padding: 1rem 0;
     }
   
-    &__overlay {
+   .banner-overlay {
       background-color: #2d2d2d;
       opacity: 0.89;
       width: 100%;
@@ -280,18 +241,17 @@ body {
       gap: 1rem;
       text-align: center;
     }
-  
-    h2 {
+  }
+    .content-h2 {
       font-size: 3.2rem;
     }
   
-    span {
+    .content-span {
       display: flex;
       font-size: 2.7rem;
       gap: 1rem;
       align-items: center;
-      color: $text-orange;
+      color: #ff4d30;
       white-space: nowrap;
     }
-  }
-  
+ 

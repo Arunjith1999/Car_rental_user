@@ -27,7 +27,7 @@ const Category = () => {
       <section className="models-section">
         <HeroPages name="Vehicle Models" />
         <CarList/>
-       <div className="book-banner">
+       {/* <div className="book-banner">
           <div className="book-banner__overlay"></div>
           <div className="container">
             <div className="text-content">
@@ -38,7 +38,7 @@ const Category = () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
        <Footer/>   
      </section>
 </div>
