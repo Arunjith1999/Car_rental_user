@@ -61,14 +61,14 @@ const navigate = useNavigate()
   return (
     <>
     <Navbar/>
-<div className='container' style={{zIndex:'-9999'}} >
+<div className='container' style={{zIndex:'-9999',zoom:''}} >
   <div className='row col-md-12' >
 <div className = {styles['card-wrapper']} >
   <div className = {styles['card']}>
-    <div className = {styles['product-imgs']} style={{  border: '1px solid black'}}>
-      <div className ={styles['img-display']} style={{  border: '1px solid black'}}>
+    <div className = {styles['product-imgs']} style={{  border: '1px solid black',}}>
+      <div className ={styles['img-display']}>
 
-        <div className = {styles['img-showcase']}>
+        <div className = {styles['img-showcase']}  >
           <img  src ={`http://127.0.0.1:8000${imageSrc}`} alt = "Car image"/>
         </div>
       </div>

@@ -5,11 +5,13 @@ import Cookies from 'js-cookie'
 import styles from './Home.module.css'
 import { categoryGet, userLogout } from "../../../utils/constants";
 import axios from '../../../utils/axios'
+import Swal from 'sweetalert2'
 
 function Navbar() {
   const [nav, setNav] = useState(false);
   const Token = Cookies.get('jwt')
   const [cat, setCat] = useState([])
+  const [showDeleteSwal, setShowDeleteSwal] = useState(false);
   const navigate = useNavigate()
   
   
@@ -26,12 +28,34 @@ const handleSelect=(e)=>{
   };
 const id = Cookies.get('user_id')
 console.log(id);
+
+
   const handleLogout=()=>{
-    Cookies.remove('jwt')
-    Cookies.remove('user_id')
-    setTimeout(() => {
-      navigate('/login');
-    }, 0);
+
+    setShowDeleteSwal(true);
+        {showDeleteSwal && (
+            Swal.fire({
+              title: 'Are you sure you want to logout ?',
+              text: '!!!',
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonText: 'Yes, confirm!',
+              cancelButtonText: 'cancel'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Cookies.remove('jwt')
+                Cookies.remove('user_id')
+                setTimeout(() => {
+                  navigate('/login');
+                }, 0);
+                  setShowDeleteSwal(false);
+                }else {
+                  // User clicked the cancel button, hide the swal
+                  setShowDeleteSwal(false);
+                }
+              })
+            )}
+   
    
    
     

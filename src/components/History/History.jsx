@@ -85,10 +85,6 @@ const History = () => {
     <div>
      <Navbar/>
     
-    
-
-    
-
                      <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered"  id="dataTable" width="100%" cellspacing="0" style={{marginTop:'13rem',width:'95%',marginLeft:'4rem',zoom:'1.3'}}>

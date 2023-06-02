@@ -37,17 +37,19 @@ function App() {
           <Route path ='/otp' element ={<Otp/>}></Route>
           <Route path = '/category/:id' element = {<Category/>}></Route>
           <Route path = 'brand/:id' element = {<CarList/>}></Route>
-          <Route path = '/car_details/:id' element = {<Car_Details/>}></Route>
-          <Route path = '/booking/:id' element = {<Booking/>}></Route>
+          
           <Route path='/' element={<HomePage/>}></Route>
-          <Route path ='/history' element={<History/>}></Route>
-          <Route path ='/profile' element ={<Profile/>}></Route>
-
+         
           {/* ======================Admin============================= */}
 
          
         <Route element = {<UserAccess/>}>
           <Route path ='/profile' element ={<Profile/>}></Route>
+          <Route path = '/car_details/:id' element = {<Car_Details/>}></Route>
+          <Route path = '/booking/:id' element = {<Booking/>}></Route>
+          <Route path ='/history' element={<History/>}></Route>
+          
+
           {/* <Route path = '/models' element = {<Category/>}></Route> */}
         </Route>
 

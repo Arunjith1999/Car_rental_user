@@ -117,13 +117,13 @@ const Profile = () => {
      <Navbar />
      </div>
     
-    <div className='container' >
+    <div className='container'>
 
     <div className='row col-md-12'>
      <div className="emp-profile" style={{boxShadow:'2px 1px 2px 1px '}}>
            
-                <div className="row">
-                    <div className="col-md-4" >
+                <div className="row mt-5">
+                    <div className="col-md-4 mt-3" >
                     <form enctype="multipart/form-data"  method="post" onSubmit={handleSubmit((data)=>onSubmit(data,user.id))}>
                     <div class="profile-img">
                             <img src={`http://127.0.0.1:8000${user.profile_pic}`}  alt=""/>
@@ -138,7 +138,7 @@ const Profile = () => {
                     </form>     
                         
                     </div>
-                    <div className="col-md-6" >
+                    <div className="col-md-6 mt-3" >
                         <div className="profile-head">
                                     <h2>
                                      {user.first_name + user.last_name}
@@ -147,7 +147,7 @@ const Profile = () => {
                                         Web Developer and Designer
                                     </h6> */}
                                      {/* <p className="proile-rating">RANKINGS : <span>8/10</span></p> */}
-                                     <div style={{marginTop:'8rem'}}>
+                                     <div style={{marginTop:'5rem'}}>
                                      <ul className="nav nav-tabs" id="myTab" role="tablist">
                                 <li className="nav-item">
                                     <a className="nav-link active" id="home-tab" data-bs-toggle="tab"   href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -160,11 +160,11 @@ const Profile = () => {
                           
                         </div>
                     </div>
-                    <div className="col-md-2" >
+                    <div className="col-md-2 " >
                         <input type="submit" className="profile-edit-btn" name="btnAddMore" value="Edit Profile" style={{fontSize:'1.3rem',borderRadius:'15px'}}/>
                       
                       <div>
-                        <button className='btn btn-success mt-4 w-4' style={{borderRadius:'15px',width:'13rem',fontSize:'1.3rem'}} onClick={()=>setWalletPopUp(true)}>Wallet <FontAwesomeIcon icon={faWallet}/> </button>
+                        <button className='btn btn-success mt-4 w-4' style={{borderRadius:'15px',width:'10rem',fontSize:'1.3rem'}} onClick={()=>setWalletPopUp(true)}>Wallet <FontAwesomeIcon icon={faWallet}/> </button>
                       </div>
                        
                     </div>
@@ -174,7 +174,7 @@ const Profile = () => {
                     <div className="col-md-4">
 
                        
-                        <div class="mb-3 col-md-6">
+                        <div class="mb-3 col-md-6 mt-3">
                         <form enctype="multipart/form-data"  method="post" onSubmit={handleSubmit((data)=>onSubmit_id_proof(data,user.id))}>
 
                             <label for="exampleInputEmail1" class="form-label">ID proof</label>
@@ -184,7 +184,7 @@ const Profile = () => {
                         </form>
                         </div>
                         <div>
-                        <div class="mb-3 col-md-6">
+                        <div class="mb-3 col-md-6 mt-3">
                         <form enctype="multipart/form-data"  method="post" onSubmit={handleSubmit((data)=>onSubmit_license(data,user.id))}>
                             <label for="exampleInputEmail1" class="form-label">Driving License</label>
                             <input type="file" class="form-control"   id="license" name='license'  {...register('license')} aria-describedby="emailHelp"/>
@@ -202,42 +202,42 @@ const Profile = () => {
 
                                       
                                         <div className="row">
-                                            <div className="col-md-6">
+                                            <div className="col-md-6 mt-5">
                                                 <label>User Id</label>
                                             </div>
-                                            <div className="col-md-6">
+                                            <div className="col-md-6  mt-5">
                                                 <p>{user.id}</p>
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="col-md-6">
+                                            <div className="col-md-6 mt-4">
                                                 <label>Firstname</label>
                                             </div>
-                                            <div className="col-md-6">
+                                            <div className="col-md-6  mt-4">
                                                 <p>{user.first_name}</p>
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="col-md-6">
+                                            <div className="col-md-6 mt-4">
                                                 <label>Lastname</label>
                                             </div>
-                                            <div className="col-md-6">
+                                            <div className="col-md-6 mt-4">
                                                 <p>{user.last_name}</p>
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="col-md-6">
+                                            <div className="col-md-6 mt-4">
                                                 <label>Email</label>
                                             </div>
-                                            <div className="col-md-6">
+                                            <div className="col-md-6 mt-4">
                                                 <p>{user.email}</p>
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="col-md-6">
+                                            <div className="col-md-6 mt-4">
                                                 <label>Phone</label>
                                             </div>
-                                            <div className="col-md-6">
+                                            <div className="col-md-6 mt-4">
                                                 <p>{user.phone}</p>
                                             </div>
                                         </div>
@@ -248,7 +248,7 @@ const Profile = () => {
                                {addressStatus === 'Not Exist' ? 
                                
                                 <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <div style={{fontSize:'25px',marginTop:'-115px'}}>
+                                <div style={{fontSize:'25px'}}>
                                
                                   <AddAddress id ={id}/>
                                   </div>
@@ -256,8 +256,8 @@ const Profile = () => {
 
                                :(
                                 <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <div style={{fontSize:'25px',marginTop:'-115px'}}>
-                                    <button style={{marginTop:'2rem'}} className='btn btn-info'>Edit</button>
+                                <div style={{fontSize:'25px'}}>
+                                    <button  className='btn btn-info'>Edit</button>
                                        <div className="row">
                                             <div className="col-md-6">
                                                 <label>Building Name</label>

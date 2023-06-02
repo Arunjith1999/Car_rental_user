@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Form, Button} from 'semantic-ui-react';
 import {useForm} from 'react-hook-form';
 import * as yup from 'yup';
@@ -11,6 +11,7 @@ import { red } from '@mui/material/colors';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import axios from '../../../utils/axios'
 import { signupPost } from '../../../utils/constants';
+import Cookies from 'js-cookie';
 
 
 const schema = yup.object().shape({
@@ -59,6 +60,12 @@ const schema = yup.object().shape({
 const Signup = () => {
     const navigate = useNavigate()
     const {register, handleSubmit, formState: {errors} } = useForm({resolver : yupResolver(schema),});
+    const token = Cookies.get('jwt')
+    useEffect(()=>{
+      if (token){
+        navigate('/')
+      }
+    },[])
     const onSubmit = (data) => {
         // console.log(data);
         axios.post(signupPost,data,{

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { toast, Toaster } from 'react-hot-toast'
 import styles from './Otp.module.css'
 import {BsFillShieldLockFill,BsTelephoneFill} from 'react-icons/bs'
-import OtpInput from 'react-otp-input'
+import image from '../../assets/Images/logo.png'
 import {CgSpinner} from 'react-icons/cg'
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -20,6 +20,8 @@ const Otp = () => {
     const [loading, setLoading] = useState(false);
     const [showOTP, setShowOTP] = useState(false);
     const [user, setUser] = useState(null);
+    const [jwt, setJwt] = useState('')
+    const [userid, setUserid] = useState('')
     const navigate = useNavigate()
     const {register} = useForm();
     const token = Cookies.get('jwt')
@@ -49,6 +51,8 @@ const Otp = () => {
         console.log(formatPh);
         axios.post(getNumber,{'phone':ph}).then((res)=>{
              console.log(res.data);
+             setJwt(res.data.jwt_token)
+             setUserid(res.data.user_id)
              if (res.data.status == 'verified'){
                 signInWithPhoneNumber(auth, formatPh, appVerifier)
                 .then((confirmationResult) => {
@@ -56,8 +60,7 @@ const Otp = () => {
                   setLoading(false);
                   setShowOTP(true);
                   toast.success("OTP sended successfully!");
-                  Cookies.set("jwt",String(res.data.jwt_token))
-                  Cookies.set("user_id",String(res.data.user_id))
+                 
                 })
                 
                 .catch((error) => {
@@ -82,11 +85,14 @@ const Otp = () => {
       }
       function onOTPVerify() {
 
-        if (token) {
+        
             setLoading(true);
             window.confirmationResult
               .confirm(otp)
+              
               .then(async (res) => {
+                Cookies.set("jwt",String(jwt))
+                Cookies.set("user_id",String(userid))
                 console.log(res);
                 setUser(res.user);
                 setLoading(false);
@@ -97,26 +103,33 @@ const Otp = () => {
                 console.log(err);
                 setLoading(false);
               });
-        }
+        
        
       }
     
 
   return (
+    <>
+      
     <section className={styles.section}>
         <div id="recaptcha-container"></div>
     <div>
       <Toaster toastOptions={{ duration: 4000 }} />
       
       {user ? (
-        <h2 className={styles.loginsuccess}>
+        <h2 className={styles.loginsuccess} >
           👍Login Success
         </h2>
       ) : (
+     
+     
+      
         <div className={styles.container}>
+            <img src={image} alt="" style={{width:'90px',height:'70px',marginLeft:'6rem'}}/>
           <h1 className={styles.heading}>
             Forget password !! <br/> Verify By Otp
           </h1>
+         
           {showOTP ? (
             <>
               <div className={styles.circle}>
@@ -179,6 +192,7 @@ const Otp = () => {
       )}
     </div>
   </section>
+  </>
 
   )
 }

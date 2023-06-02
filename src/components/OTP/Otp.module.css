@@ -1,6 +1,6 @@
 
 .section{
-  background-color: #1E5631;
+  background-color:#D3D3D3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,14 +37,14 @@
   .heading {
     text-align: center;
     line-height: 1.6; /* normal */
-    color: #FFFFFF; /* white */
+    color: black;
     font-weight: 500; /* medium */
     font-size: 2rem; /* 32px */
     margin-bottom: 1.5rem; /* 24px */
   }
   .circle {
-    background-color: #FFFFFF; /* white */
-    color: #059669; /* emerald-500 */
+    background-color:white;
+    color: orangered;
     display: inline-block;
     width: fit-content;
     margin: 0 auto;
@@ -52,15 +52,15 @@
     border-radius: 50%;
   }
   .heading2 {
-    font-weight: bold;
-    font-size: 1.25rem; /* 20px */
-    color: #FFFFFF; /* white */
+    font-weight: bolder;
+    font-size: 1.27rem; /* 20px */
+    color: black;
     text-align: center;
   }
 
   .container2 {
     background-color: #047857; /* emerald-600 */
-    width: 100%;
+    width: 80%;
     display: flex;
     gap: 0.25rem; /* 4px */
     align-items: center;
@@ -95,14 +95,14 @@
     border-radius: 50%;
   } 
   .heading3 {
-    font-weight: bold;
-    font-size: 1.25rem; /* 20px */
-    color: #FFFFFF; /* white */
+    font-weight: bolder;
+    font-size: 1.27rem; /* 20px */
+    color: black;
     text-align: center;
   }
   .container3 {
     background-color: #047857; /* emerald-600 */
-    width: 100%;
+    width: 80%;
     display: flex;
     gap: 0.25rem; /* 4px */
     align-items: center;

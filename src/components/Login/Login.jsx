@@ -10,19 +10,11 @@ import { Box, TextField, Typography} from '@mui/material';
 import React, { useEffect } from 'react'
 import axios from '../../../utils/axios'
 import image from '../../assets/Images/logo.png'
-// import { MDBCheckbox, MDBCol, MDBContainer, MDBRow } from 'mdb-react-ui-kit'
-import {
-    MDBContainer,
-    MDBInput,
-    MDBCheckbox,
-    MDBBtn,
-    MDBIcon,
-    
-  }
-  from 'mdb-react-ui-kit';
-import shadows from '@mui/material/styles/shadows';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { Link } from 'react-router-dom';
 import { loginPost } from '../../../utils/constants';
+import { faEnvelope, faLock, faVoicemail } from '@fortawesome/free-solid-svg-icons';
 const schema = yup.object().shape({
     email : yup
             .string('email should be a string')
@@ -39,6 +31,8 @@ const schema = yup.object().shape({
 
 
 const Login = () => {
+
+    
   const token = Cookies.get('jwt')
   useEffect(()=>{
     if (token){
@@ -90,63 +84,6 @@ const Login = () => {
      <div>
           
 
-{/* 
-        <div  style={{height:"15rem"}}>
-          <img  style={{width: '10rem',marginLeft:'65rem',marginTop:'10rem'}}  src={image} alt="" />
-        </div>
-        <MDBContainer className='text-center   p-3  ' style={{width:'50vh',height:'55vh' , boxShadow:'1px 2px 5px #D7FF00'}}>
-
-        <Typography component = 'h1' variant ='h3' className='text-center p-5' >
-            
-            Login
-
-            </Typography>
-        <Box component="form" onSubmit = {handleSubmit(onSubmit)} sx ={{mt:1}}>
-        <div  >
-        <TextField
-                           style={{width:'20rem'}}
-                           label ="email"
-                           variant = "outlined"
-                           name = "email"
-                           id = "email"
-                           error = {!!errors.email}
-                           helperText = {errors.email? errors.email.message:""}
-                           {...register('email')}
-                           />
-            
-            </div>    
-       
-     
-        <TextField margin ='normal'
-                             
-                            label ='Password'
-                            variant='outlined'
-                            type='password'
-                            name='Password'
-                            id ='Password'
-                            error = {!!errors.password}
-                           helperText = {errors.password ? errors.password.message:""}
-                           {...register('password')} style={{width:'20rem'  ,marginTop:'2rem'}}
-                            />
-       
-  
-        <div className='mt-3 mb-3'>
-        
-          <a href="!#" className='text-center'>  Forgot password?</a>
-        </div>
-         
-            <button className='btn btn-primary m-3 ' >Sign In</button>
-        
-        
-  
-       
-          <Link to ='/signup' ><Typography style={{color : "red" ,fontSize:'1em'}}>Not registered yet!  <span className='signup'>Signup here</span> </Typography></Link>
-          
-  
-          </Box>
-  
-      </MDBContainer> */}
-
 
 <div className={styles.wrapper}>
         <div className={styles.logo}>
@@ -157,7 +94,7 @@ const Login = () => {
         </div>
         <form className="p-3 mt-3" onSubmit = {handleSubmit(onSubmit)}>
             <div className={`${styles['form-field']} d-flex align-items-center`}>
-                <span className="far fa-user"></span>
+                <FontAwesomeIcon icon={faEnvelope} />
                 <TextField type="text" 
                 variant='standard'
                 id ='email'
@@ -168,7 +105,7 @@ const Login = () => {
                  {...register('email')}/>
             </div>
             <div className={`${styles['form-field']} d-flex align-items-center`}>
-                <span className={styles.fas}></span>
+            <FontAwesomeIcon icon={faLock} />
                 <TextField type="password"
                 id = 'password'
                 name = 'password'

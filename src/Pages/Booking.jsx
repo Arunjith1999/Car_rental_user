@@ -57,13 +57,12 @@ const labelStyle = {
   return (
     <div>
       <Navbar />
-      <div className="container">
+      <div className="container" style={{zoom:'1.2'}}>
         <div className="row col-md-12">
           <div className="row">
-            {/* <div className='col-md-6'> */}
             <div
               className={styles["card-wrapper"]}
-              style={{ marginTop: "15rem" }}
+              style={{ marginTop: "3rem" }}
             >
               <div className={styles["card"]}>
                 <div className={styles["product-imgs"]}>
@@ -98,24 +97,7 @@ const labelStyle = {
                   <span className={styles.limitspan}>  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;Minimum of  <u style={{color:'red'}}>2</u>    days should be selected</span>
                   </div>
                 
-                  {/* <div
-                    className={styles["car-type"]}
-                    style={{ marginTop: "2rem", width: "30rem" }}
-                  >
-                    <label className={styles.label}>
-                      <i className="fa-solid fa-location-dot"></i>{" "}
-                      <span style={{ color: "grey" }}>Pick-up</span>
-                      <b style={{ color: "red" }}>*</b>
-                    </label>
-                    <select className={styles.select}>
-                      <option>Select pick up location</option>
-                      <option>Belgrade</option>
-                      <option>Novi Sad</option>
-                      <option>Nis</option>
-                      <option>Kragujevac</option>
-                      <option>Subotica</option>
-                    </select>
-                  </div> */}
+                  
                   <hr
                     style={{
                       color: "red",
@@ -125,21 +107,11 @@ const labelStyle = {
                       marginTop:'6rem'
                     }}
                   />
-                  {/* <div className="col" style={{marginTop:'3rem'}}>
-                  <TextField id="standard-basic" style={textFieldStyle}  label="Coupon Available?" variant="standard" InputLabelProps={{ style: labelStyle }} />
-                  <button className={styles.couponbutton}>Apply Coupon</button>
                 
-                  </div> */}
                    
                 </div>
               </div>
             </div>
-              {/* <button
-                className="btn btn-primary mx-auto"
-                style={{ width: "20rem" ,height:'4rem',fontSize:'1.5rem'}}
-              >
-                Proceed to Checkout
-              </button> */}
               <div className="d-flex justify-content-end">
               {!isDateSelected?
                             <button className="btn btn-outline-secondary" disabled style={{width:'25rem', fontSize:'1.7rem', borderRadius:'10px'}} onClick={clickHandler}>Select date to continue</button>

@@ -2,6 +2,7 @@ import React from 'react'
 import {useForm} from 'react-hook-form'
 import axios from '../../../utils/axios'
 import { postAddress } from '../../../utils/constants'
+import { toast } from 'react-hot-toast'
 const AddAddress = (props) => {
     const {register,handleSubmit,formState:{errors}} = useForm()
     const onSubmit = async(data)=>{
@@ -13,6 +14,7 @@ const AddAddress = (props) => {
         formData.append('zipcode',data.zipcode)
         axios.post(`${postAddress}${props.id}/`,formData).then((res)=>{
             console.log(res.data);
+            toast.success('Address Added')
         })
 
     }
