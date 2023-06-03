@@ -72,7 +72,7 @@ const labelStyle = {
                       style={{ marginLeft: "8rem" }}
                     >
                       <img
-                        src={`http://127.0.0.1:8000${carImg}`}
+                        src={` https://ap.carrent.website${carImg}`}
                         alt="Car image"
                       />
                     </div>

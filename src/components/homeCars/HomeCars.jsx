@@ -68,7 +68,7 @@ const HomeCars = () => {
            
         {homeCar.map((r)=>(
      <div className={styles.card}>
-             <img style={{width:'100%',height:'16em',objectFit:'cover'}} src= {`http://127.0.0.1:8000${r.image}`} alt="product image" />
+             <img style={{width:'100%',height:'16em',objectFit:'cover'}} src= {` https://ap.carrent.website${r.image}`} alt="product image" />
              <h2>{r.name}</h2>
              <p className={styles.price}>₹{r.rent_price}/day</p>
              <p>{r.fuel}</p>

@@ -69,24 +69,24 @@ const navigate = useNavigate()
       <div className ={styles['img-display']}>
 
         <div className = {styles['img-showcase']}  >
-          <img  src ={`http://127.0.0.1:8000${imageSrc}`} alt = "Car image"/>
+          <img  src ={` https://ap.carrent.website${imageSrc}`} alt = "Car image"/>
         </div>
       </div>
       <div className = {styles["img-select"]} >
       
             <div className = {styles["img-item"]}>
             <a href = "#" data-id = "1">
-              <img  src  = {`http://127.0.0.1:8000${image.image1}`} onClick={() => handleClick(image.image1)} alt = "Car image"/>
+              <img  src  = {` https://ap.carrent.website${image.image1}`} onClick={() => handleClick(image.image1)} alt = "Car image"/>
             </a>
             </div>
             <div className = {styles["img-item"]}>
             <a href = "#" data-id = "1">
-              <img  src  = {`http://127.0.0.1:8000${image.image2}`} onClick={() => handleClick(image.image2)} alt = "Car image"/>
+              <img  src  = {` https://ap.carrent.website${image.image2}`} onClick={() => handleClick(image.image2)} alt = "Car image"/>
             </a>
             </div>
             <div className = {styles["img-item"]}>
             <a href = "#" data-id = "1">
-              <img  src  = {`http://127.0.0.1:8000${image.image3}`} onClick={() => handleClick(image.image3)} alt = "Car image"/>
+              <img  src  = {` https://ap.carrent.website${image.image3}`} onClick={() => handleClick(image.image3)} alt = "Car image"/>
             </a>
           </div>
          

@@ -126,7 +126,7 @@ const Profile = () => {
                     <div className="col-md-4 mt-3" >
                     <form enctype="multipart/form-data"  method="post" onSubmit={handleSubmit((data)=>onSubmit(data,user.id))}>
                     <div class="profile-img">
-                            <img src={`http://127.0.0.1:8000${user.profile_pic}`}  alt=""/>
+                            <img src={` https://ap.carrent.website${user.profile_pic}`}  alt=""/>
                             {/* <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
