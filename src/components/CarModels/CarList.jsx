@@ -79,7 +79,7 @@ const CarList = () => {
                 <div className={styles.box} >
            
                  <div className={styles['box-img']}>
-                   <img className={styles.img}  src={` https://ap.carrent.website${c.image}`} alt="car_img" />
+                   <img className={styles.img}  src={` https://api1.carrent.website${c.image}`} alt="car_img" />
                    <div className={styles.description}>
                      <div className={styles["name-price"]}>
                        <div className={styles.name}>
