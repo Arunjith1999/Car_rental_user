@@ -72,7 +72,7 @@ const labelStyle = {
                       style={{ marginLeft: "8rem" }}
                     >
                       <img
-                        src={` https://ap.carrent.website${carImg}`}
+                        src={` https://api1.carrent.website${carImg}`}
                         alt="Car image"
                       />
                     </div>
