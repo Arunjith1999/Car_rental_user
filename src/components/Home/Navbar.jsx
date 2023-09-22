@@ -1,11 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import Logo from '../../assets/Images/logo.png'
 import { useEffect, useState } from "react";
+import { faBars, faXmark, faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import Cookies from 'js-cookie'
-import styles from './Home.module.css'
+import './navbar.css'
 import { categoryGet, userLogout } from "../../../utils/constants";
 import axios from '../../../utils/axios'
 import Swal from 'sweetalert2'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -73,22 +75,22 @@ console.log(id);
     <>
       <nav >
         {/* mobile */}
-        <div className={`${styles['mobile-navbar']} ${nav ? styles["open-nav"] : ""}`}>
-          <div onClick={openNav} className={styles.close}>
-            <i className="fa-solid fa-xmark"></i>
+        <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>
+        <div onClick={openNav} className="mobile-navbar__close">
+            <FontAwesomeIcon icon={faXmarkCircle}/>
           </div>
-          <ul className={styles.links}>
-            <li className={styles.a}>
+          <ul className="mobile-navbar__links">
+            <li>
               <Link onClick={openNav} to="/">
                 Home
               </Link>
             </li>
-            <li className={styles.a}>
+            <li>
               <Link onClick={openNav} to="/about">
                 About
               </Link>
             </li>
-            <li className={styles.a}>
+            <li>
               {/* <Link onClick={openNav} to="/models"> */}
                 <select name="" id="">
                     <option >Categories</option>
@@ -98,17 +100,17 @@ console.log(id);
                 </select>
               {/* </Link> */}
             </li>
-            <li className={styles.a}>
+            <li>
               <Link onClick={openNav} to="/Profile">
                Profile
               </Link>
             </li>
-            <li className={styles.a}>
+            <li>
               <Link onClick={openNav} to="/team">
                 History
               </Link>
             </li>
-            <li className={styles.a}>
+            <li>
               <Link onClick={openNav} to="/contact">
                 Contact
               </Link>
@@ -118,21 +120,21 @@ console.log(id);
 
         {/* desktop */}
 
-        <div className={styles.navbar}>
-          <div className={styles.img}>
+        <div className="navbar">
+        <div className="navbar__img">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-              <img className={styles.img2} src={Logo} alt="logo-img" />
+              <img  src={Logo} alt="logo-img" />
             </Link>
           </div>
-          <ul className={styles.dlinks}>
+          <ul className="navbar__links">
             <li >
-              <Link className={styles.ad} to="/">
+            <Link className="home-link" to="/">
                 Home
               </Link>
             </li>
             <li >
               {" "}
-              <Link className={styles.ad} to="/about">
+              <Link className="about-link" to="/about">
                 About
               </Link>
             </li>
@@ -140,7 +142,7 @@ console.log(id);
               {" "}
               {/* <Link className="models-link" to="/models">
                 Vehicle Models
-              </Link> */}<select className={styles.ad} style={{fontSize:'1.5rem', backgroundColor: 'transparent',border:'0px'}}  onChange={handleSelect} name="" id="">
+              </Link> */}<select style={{fontSize:'1.5rem', backgroundColor: 'transparent',border:'0px'}}  onChange={handleSelect} name="" id="">
                                     <option >Categories</option>
 
                     {cat.map((r, index)=>(
@@ -150,19 +152,19 @@ console.log(id);
             </li>
             <li >
               {" "}
-              <Link className={styles.ad} to="/profile">
+              <Link className="profile-link" to="/profile">
                Profile
               </Link>
             </li>
             <li >
               {" "}
-              <Link className={styles.ad} to="/history">
+              <Link className="history-link" to="/history">
                 History
               </Link>
             </li>
             <li >
               {" "}
-              <Link className={styles.ad} to="/contact">
+              <Link className="contact-link" to="/contact">
                 Contact
               </Link>
             </li>
@@ -171,21 +173,21 @@ console.log(id);
           {Token ? 
           
 
-          <div className={styles.buttons}>
+          <div className="navbar__buttons">
           
           {/* <Link className={styles.register} to='/login' onClick={handleLogout}>
             Logout
           </Link> */}
-          <button className={styles.register} onClick={handleLogout}>Logout</button>
+          <button  className="navbar__buttons__register" onClick={handleLogout}>Logout</button>
         </div>
           
           : 
           
-          <div className={styles.buttons}>
-          <Link className={styles.signin} to="/login">
+          <div className="navbar__buttons">
+          <Link className="navbar__buttons__sign-in" to="/login">
             Sign In
           </Link>
-          <Link className={styles.register} to="/signup">
+          <Link className="navbar__buttons__register" to="/signup">
             Register
           </Link>
         </div>
@@ -194,8 +196,8 @@ console.log(id);
       
 
           {/* mobile */}
-          <div className={styles.mobile} onClick={openNav}>
-            <i className="fa-solid fa-bars"></i>
+          <div  className="mobile-hamb" onClick={openNav}>
+            <FontAwesomeIcon icon={faBars} />
           </div>
         </div>
       </nav>

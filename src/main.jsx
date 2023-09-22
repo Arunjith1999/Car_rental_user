@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 // Import our custom CSS
 // import '../scss/main.scss'
-import '../src/scss/main.scss'
+// import '../src/scss/main.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 // Import all of Bootstrap's JS

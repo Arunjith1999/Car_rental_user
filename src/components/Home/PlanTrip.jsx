@@ -10,7 +10,7 @@ function PlanTrip() {
         <div className={styles.container}>
           <div className={styles['plan-container']}>
             <div className={styles.title}>
-              <h3 className={styles['plancontainer-h3']}>Plan your trip now</h3>
+              <h5 className={styles['plancontainer-h3']}>Plan your trip now</h5>
               <h2 className={styles['plancontainer-h2']}>Quick & easy car rental</h2>
             </div>
 
