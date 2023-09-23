@@ -106,7 +106,7 @@ console.log(id);
               </Link>
             </li>
             <li>
-              <Link onClick={openNav} to="/team">
+              <Link onClick={openNav} to="/history">
                 History
               </Link>
             </li>
@@ -118,18 +118,18 @@ console.log(id);
             {Token ? 
           
 
-          <div className="navbar__buttons">
+          <div>
           
-          <button  className="navbar__buttons__register" onClick={handleLogout}>Logout</button>
+          <button  onClick={handleLogout}>Logout</button>
         </div>
           
           : 
           
-          <div className="navbar__buttons">
-          <Link className="navbar__buttons__sign-in" to="/login">
+          <div>
+          <Link  to="/login">
             Sign In
           </Link>
-          <Link className="navbar__buttons__register" to="/signup">
+          <Link  to="/signup">
             Register
           </Link>
         </div>
