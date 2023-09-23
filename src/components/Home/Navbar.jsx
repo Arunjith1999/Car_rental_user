@@ -92,7 +92,7 @@ console.log(id);
             </li>
             <li>
               {/* <Link onClick={openNav} to="/models"> */}
-                <select name="" id="">
+                <select name="" id="" onChange={handleSelect}>
                     <option >Categories</option>
                     {cat.map((r, index)=>(
                     <option value={r.id} >{r.title}</option>
@@ -115,6 +115,26 @@ console.log(id);
                 Contact
               </Link>
             </li>
+            {Token ? 
+          
+
+          <div className="navbar__buttons">
+          
+          <button  className="navbar__buttons__register" onClick={handleLogout}>Logout</button>
+        </div>
+          
+          : 
+          
+          <div className="navbar__buttons">
+          <Link className="navbar__buttons__sign-in" to="/login">
+            Sign In
+          </Link>
+          <Link className="navbar__buttons__register" to="/signup">
+            Register
+          </Link>
+        </div>
+          
+          }
           </ul>
         </div>
 
@@ -175,9 +195,6 @@ console.log(id);
 
           <div className="navbar__buttons">
           
-          {/* <Link className={styles.register} to='/login' onClick={handleLogout}>
-            Logout
-          </Link> */}
           <button  className="navbar__buttons__register" onClick={handleLogout}>Logout</button>
         </div>
           
