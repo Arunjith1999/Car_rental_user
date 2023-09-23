@@ -31,11 +31,17 @@ const handleSelect=(e)=>{
 const id = Cookies.get('user_id')
 console.log(id);
 
+const handleLogout =() =>{
+  swal();
+}
+const handleMobileLogout =()=>{
+  setNav(!nav)
+  swal();
+}
 
-  const handleLogout=()=>{
-
+  const swal =()=>{
     setShowDeleteSwal(true);
-        {showDeleteSwal && (
+        {showDeleteSwal && console.log('sdf'); (
             Swal.fire({
               title: 'Are you sure you want to logout ?',
               text: '!!!',
@@ -120,16 +126,16 @@ console.log(id);
 
           <div>
           
-          <button  onClick={handleLogout}>Logout</button>
+          <button style={{width:'140px', fontSize:'25px', borderRadius:'5px'}}  onClick={handleMobileLogout}>Logout</button>
         </div>
           
           : 
           
-          <div>
-          <Link  to="/login">
+          <div className="mobile-buttons">
+          <Link className="mobile-signin" to="/login">
             Sign In
           </Link>
-          <Link  to="/signup">
+          <Link  className="mobile-signup" to="/signup">
             Register
           </Link>
         </div>

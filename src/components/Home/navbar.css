@@ -184,4 +184,23 @@ body {
   left: 0;
 }
 
-  
+.mobile-buttons{
+ display: grid;
+}
+.mobile-signin{
+  background-color: #fa4226;
+  font-size: medium;
+  color: #010103;
+  padding: 8px;
+  width: 160px;
+  border-radius: 8px;
+}
+.mobile-signup{
+  margin-top: 30px;
+  background-color: #fa4226;
+  font-size: medium;
+  color: #010103;
+  padding: 8px;
+  width: 160px;
+  border-radius: 8px;
+}
